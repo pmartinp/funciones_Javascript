@@ -6,10 +6,10 @@ función la cadena "una cadena cani es como ésta" obtendremos
 de MAYÚSCULAS y minúsculas, sustituir la letra C por la K y añadir tres letras H al final.
 */
 
-alert(stringToCani("una cadena cani es como esta"));
+alert(stringToCani("una cadena Cani es como esta"));
 
 function stringToCani(cadena) {
-  cadena = cadena.replaceAll("c", "k");
+  cadena = cadena.replaceAll(/c|C/g, "k");
   let res = "";
   for (let index = 0; index < cadena.length; index++) {
     if (index % 2 == 0) {
